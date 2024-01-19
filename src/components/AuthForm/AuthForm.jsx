@@ -11,8 +11,15 @@ const AuthForm = () => {
         confirmPassword:''
     });
     const handleAuth = () => {
-        console.log("inputs",inputs)
-    }
+        if(!inputs.email || !inputs.password){
+        // if(inputs.email || inputs.password || inputs.confirmPassword){
+            alert("Please fill all the fields");
+            return;
+        }
+
+        navigate("/");
+    };
+    
     return(
         <>
             <Box border={"1px solid grey"} borderRadius={4} padding={5}>
