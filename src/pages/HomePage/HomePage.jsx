@@ -1,11 +1,12 @@
 import { Box, Container, Flex } from "@chakra-ui/react";
+import FeedPosts from "../../components/FeedPosts/FeedPosts";
 
 const HomePage = () => {
   return (
     <Container maxW={"containerx.lg"}>
       <Flex>
         <Box flex={2} py={10} border={"1px solid blue"}>
-          FeedPosts
+          <FeedPosts />
         </Box>
         <Box
           flex={3}
