@@ -13,6 +13,7 @@
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@chakra-ui/theme-tools": "^2.1.2",
+    "@react-icons/all-files": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
