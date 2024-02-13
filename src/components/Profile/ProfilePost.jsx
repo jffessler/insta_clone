@@ -1,5 +1,7 @@
 import {
+  Avatar,
   Box,
+  Divider,
   Flex,
   GridItem,
   Image,
@@ -7,13 +9,15 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalHeader,
   ModalOverlay,
   Text,
+  VStack,
   useDisclosure,
 } from "@chakra-ui/react";
 import { AiFillHeart } from "react-icons/ai";
 import { FaComment } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
+import Comment from "../Comment/Comment";
 
 const ProfilePost = ({ img }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -75,7 +79,6 @@ const ProfilePost = ({ img }) => {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
           <ModalBody bg={"black"} pb={5}>
             <Flex
@@ -92,6 +95,58 @@ const ProfilePost = ({ img }) => {
               >
                 <Image src={img} alt="profile post" />
               </Box>
+              <Flex
+                flex={1}
+                flexDir={"column"}
+                px={10}
+                display={{ base: "none", md: "flex" }}
+              >
+                <Flex alignItems={"center"} justifyContent={"space-between"}>
+                  <Flex alignItems={"center"} gap={4}>
+                    <Avatar
+                      src="/profilepic.png"
+                      size={"sm"}
+                      name="As a Programmer"
+                    />
+                    <Text fontWeight={"bold"} fontSize={12}>
+                      asaprogrammer_
+                    </Text>
+                  </Flex>
+                  <Box
+                    _hover={{ bg: "whiteAlpha.300", color: "red.600" }}
+                    borderRadius={4}
+                    p={1}
+                  >
+                    <MdDelete size={20} cursor="pointer" />
+                  </Box>
+                </Flex>
+                <Divider my={4} bg={"gray.500"} />
+                <VStack
+                  w={"full"}
+                  alignItems={"start"}
+                  maxH={"350px"}
+                  overflowY={"auto"}
+                >
+                  <Comment
+                    createdAt="1d ago"
+                    username="asaprogrammer_"
+                    profilePic="/profilepic.png"
+                    text={"Dummy images from unsplash"}
+                  />
+                  <Comment
+                    createdAt="1d ago"
+                    username="asaprogrammer_"
+                    profilePic="/profilepic.png"
+                    text={"Dummy images from unsplash"}
+                  />
+                  <Comment
+                    createdAt="1d ago"
+                    username="asaprogrammer_"
+                    profilePic="/profilepic.png"
+                    text={"Dummy images from unsplash"}
+                  />
+                </VStack>
+              </Flex>
             </Flex>
           </ModalBody>
         </ModalContent>
