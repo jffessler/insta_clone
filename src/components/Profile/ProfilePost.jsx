@@ -134,18 +134,19 @@ const ProfilePost = ({ img }) => {
                     text={"Dummy images from unsplash"}
                   />
                   <Comment
-                    createdAt="1d ago"
-                    username="asaprogrammer_"
-                    profilePic="/profilepic.png"
-                    text={"Dummy images from unsplash"}
+                    createdAt="12h ago"
+                    username="abrahmov"
+                    profilePic="https://bit.ly/dan-abramov"
+                    text={"Nice Pic"}
                   />
                   <Comment
-                    createdAt="1d ago"
-                    username="asaprogrammer_"
-                    profilePic="/profilepic.png"
-                    text={"Dummy images from unsplash"}
+                    createdAt="3h ago"
+                    username="kentdodds"
+                    profilePic="https://bit.ly/kent-c-dodds"
+                    text={"Good clone dude!"}
                   />
                 </VStack>
+                <Divider my={4} bg={"gray.800"} />
               </Flex>
             </Flex>
           </ModalBody>
