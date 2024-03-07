@@ -34,7 +34,7 @@ const ProfileHeader = () => {
           alignItems={"center"}
           w={"full"}
         >
-          <Text fontsize={{ base: "sm", md: "lg" }}>asaprogrammer_</Text>
+          <Text fontSize={{ base: "sm", md: "lg" }}>asaprogrammer_</Text>
           <Flex gap={4} alignItems={"center"} justifyContent={"center"}>
             <Button
               bg={"white"}
