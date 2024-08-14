@@ -10,7 +10,7 @@ const useFollowAndUnfollowUser = (userId) => {
   const [isFollowing, setIsFollowing] = useState(false);
   const authUser = useAuthStore((state) => state.user);
   const setAuthUser = useAuthStore((state) => state.setUser);
-  const { userProfile, setUserProfile } = useUserProfileStore;
+  const { userProfile, setUserProfile } = useUserProfileStore();
   const showToast = useShowToast();
 
   const handleFollowUser = async () => {
@@ -24,7 +24,7 @@ const useFollowAndUnfollowUser = (userId) => {
       });
 
       await updateDoc(userToFollowAndUnfollowRef, {
-        following: isFollowing
+        followers: isFollowing
           ? arrayRemove(authUser.uid)
           : arrayUnion(authUser.uid),
       });
@@ -80,6 +80,7 @@ const useFollowAndUnfollowUser = (userId) => {
       setIsFollowing(isFollowing);
     }
   }, [authUser, userId]);
+  //   console.log(userProfile);
 
   return { isUpdating, isFollowing, handleFollowUser };
 };
