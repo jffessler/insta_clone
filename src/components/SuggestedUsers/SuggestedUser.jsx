@@ -6,6 +6,7 @@ const SuggestedUser = ({ user, setUser }) => {
   const { isFollowing, isUpdating, handleFollowUser } =
     useFollowAndUnfollowUser(user.uid);
   const authUser = useAuthStore((state) => state.user);
+
   const onFollowUser = async () => {
     await handleFollowUser();
     setUser({
@@ -26,6 +27,7 @@ const SuggestedUser = ({ user, setUser }) => {
             {user.fullName}
           </Box>
           <Box fontSize={11} color={"gray.500"}>
+            {("help", console.log(user.followers))}
             {user.followers.length} followers
           </Box>
         </VStack>
