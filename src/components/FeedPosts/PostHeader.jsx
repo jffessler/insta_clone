@@ -20,27 +20,29 @@ const PostHeader = ({ post, creatorProfile }) => {
       w={"full"}
       my={2}
     >
-      {creatorProfile ? (
-        <Link to={`/${creatorProfile.username}`}>
-          <Avatar
-            src={creatorProfile.profilePicURL}
-            alt="user profile pic"
-            size={"sm"}
-          />
-        </Link>
-      ) : (
-        <SkeletonCircle size="10>" />
-      )}
       <Flex alignItems={"center"} gap={2}>
-        <Flex fontSize={12} fontWeight={"bold"} gap="2">
-          {creatorProfile ? (
-            <Link to={`/${creatorProfile.username}`}>
-              {creatorProfile.username}
-            </Link>
-          ) : (
-            <Skeleton w={"100px"} h={"10px"} />
-          )}
-          <Box color={"gray.500"}>{timeAgo(post.createdAt)}</Box>
+        {creatorProfile ? (
+          <Link to={`/${creatorProfile.username}`}>
+            <Avatar
+              src={creatorProfile.profilePicURL}
+              alt="user profile pic"
+              size={"sm"}
+            />
+          </Link>
+        ) : (
+          <SkeletonCircle size="10>" />
+        )}
+        <Flex alignItems={"center"} gap={2}>
+          <Flex fontSize={12} fontWeight={"bold"} gap="2">
+            {creatorProfile ? (
+              <Link to={`/${creatorProfile.username}`}>
+                {creatorProfile.username}
+              </Link>
+            ) : (
+              <Skeleton w={"100px"} h={"10px"} />
+            )}
+            <Box color={"gray.500"}>{timeAgo(post.createdAt)}</Box>
+          </Flex>
         </Flex>
       </Flex>
       <Box cursor={"pointer"}>

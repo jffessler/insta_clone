@@ -32,18 +32,29 @@ const SuggestedUsers = () => {
       {suggestedUsers.map((user) => (
         <SuggestedUser user={user} key={user.id} />
       ))}
-
-      <Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
-        © 2024 Built By{" "}
-        <Link
-          href="https://github.com/jffessler"
-          target="_blank"
-          color={"blue.500"}
-          fontSize={14}
-        >
-          John Fessler
-        </Link>
-      </Box>
+      <Flex direction={"column"} align={"center"}>
+        <Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
+          © 2024 Built By{" "}
+          <Link
+            href="https://github.com/jffessler"
+            target="_blank"
+            color={"blue.500"}
+            fontSize={14}
+          >
+            John Fessler
+          </Link>
+        </Box>
+        <Box fontSize={12} color={"gray.500"}>
+          <Link
+            href="https://github.com/jffessler/insta_clone"
+            target="_blank"
+            color={"blue.500"}
+            fontSize={14}
+          >
+            Clone Repository
+          </Link>
+        </Box>
+      </Flex>
     </VStack>
   );
 };

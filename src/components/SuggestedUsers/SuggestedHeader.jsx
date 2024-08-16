@@ -31,6 +31,7 @@ const SuggestedHeader = () => {
         onClick={handleLogout}
         isLoading={isLoggingOut}
         cursor={"pointer"}
+        padding={10}
       >
         Log out
       </Button>

@@ -40,7 +40,7 @@ const FeedPosts = () => {
             flexDir={"column"}
           >
             <Text fontSize={"medium"} color={"red.400"}>
-              Looks like you are not following any one!
+              Looks like no one is posting or you are not following any one!
             </Text>
             <Text color={"red.400"}>Explore, meet, and follow new people!</Text>
           </Flex>

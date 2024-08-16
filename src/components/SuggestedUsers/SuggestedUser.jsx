@@ -1,6 +1,7 @@
 import { Avatar, Box, Button, Flex, VStack } from "@chakra-ui/react";
 import useFollowAndUnfollowUser from "../../hooks/useFollowAndUnfollowUser";
 import useAuthStore from "../../store/authStore";
+import { Link } from "react-router-dom";
 
 const SuggestedUser = ({ user, setUser }) => {
   const { isFollowing, isUpdating, handleFollowUser } =
@@ -20,12 +21,15 @@ const SuggestedUser = ({ user, setUser }) => {
   return (
     <Flex justifyContent={"space-between"} alignItems={"center"} w={"full"}>
       <Flex alignItems={"center"} gap={2}>
-        <Avatar src={user.profilePicURL} size={"md"} />
-
+        <Link to={`/${user.username}`}>
+          <Avatar src={user.profilePicURL} size={"md"} />
+        </Link>
         <VStack spacing={2} alignItems={"flex-start"}>
-          <Box fontSize={12} fontWeight={"bold"}>
-            {user.fullName}
-          </Box>
+          <Link to={`/${user.username}`}>
+            <Box fontSize={12} fontWeight={"bold"}>
+              {user.fullName}
+            </Box>
+          </Link>
           <Box fontSize={11} color={"gray.500"}>
             {("help", console.log(user.followers))}
             {user.followers.length} followers

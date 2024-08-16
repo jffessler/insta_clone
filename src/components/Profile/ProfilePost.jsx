@@ -124,8 +124,8 @@ const ProfilePost = ({ post }) => {
               gap={4}
               w={{ base: "90%", sm: "70%", md: "full" }}
               mx={"auto"}
-              maxH={"90vh"}
-              maxW={"50vh"}
+              maxH={"120vh"}
+              maxW={"90vh"}
             >
               <Flex
                 borderRadius={4}
@@ -179,6 +179,7 @@ const ProfilePost = ({ post }) => {
                   {/* Caption Section */}
                   {post.caption && <Caption post={post} />}
                   {/* Comment Section */}
+                  {/* <br /> */}
                   {post.comments.map((comment) => (
                     <Comment key={comment.id} comment={comment} />
                   ))}

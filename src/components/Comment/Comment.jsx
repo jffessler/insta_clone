@@ -12,7 +12,7 @@ const Comment = ({ comment }) => {
         <Avatar src={userProfile.profilePicURL} size={"sm"} />
       </Link>
       <Flex direction={"column"}>
-        <Flex gap={2} alignItems={"center"}>
+        <Flex gap={-1} alignItems={"left"} direction={"column"}>
           <Link to={`/${userProfile.username}`}>
             <Text fontWeight={"bold"} fontSize={12}>
               {userProfile.username}
