@@ -24,7 +24,7 @@ const GoogleAuth = ({ prefix }) => {
         //login
         const userDoc = userSnap.data();
         localStorage.setItem("user-info", JSON.stringify(userDoc));
-        login(userDoc);
+        loginUser(userDoc);
       } else {
         //sign up
         const userDoc = {
