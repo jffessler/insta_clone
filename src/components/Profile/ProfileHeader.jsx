@@ -9,10 +9,10 @@ import {
 } from "@chakra-ui/react";
 import useUserProfileStore from "../../store/userProfileStore";
 import useAuthStore from "../../store/authStore";
-import EditProfile from "./editProfile";
+import EditProfile from "./EditProfile";
 import useFollowAndUnfollowUser from "../../hooks/useFollowAndUnfollowUser";
 
-// Changed case for editProfile due to launch build error
+// Changed case for EditProfile due to launch build error
 
 const ProfileHeader = () => {
   const { userProfile } = useUserProfileStore();
