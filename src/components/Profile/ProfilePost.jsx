@@ -124,8 +124,8 @@ const ProfilePost = ({ post }) => {
               gap={4}
               w={{ base: "90%", sm: "70%", md: "full" }}
               mx={"auto"}
-              maxH={"120vh"}
-              maxW={"90vh"}
+              maxH={"150vh"}
+              maxW={"100vh"}
             >
               <Flex
                 borderRadius={4}
