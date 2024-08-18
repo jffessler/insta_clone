@@ -12,6 +12,8 @@ import useAuthStore from "../../store/authStore";
 import EditProfile from "./editProfile";
 import useFollowAndUnfollowUser from "../../hooks/useFollowAndUnfollowUser";
 
+// Changed case for editProfile due to launch build error
+
 const ProfileHeader = () => {
   const { userProfile } = useUserProfileStore();
   const authUser = useAuthStore((state) => state.user);
