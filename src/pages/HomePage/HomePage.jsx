@@ -5,14 +5,18 @@ import SuggestedUsers from "../../components/SuggestedUsers/SuggestedUsers";
 const HomePage = () => {
   return (
     <Container maxW={"containerx.lg"}>
-      <Flex>
-        <Box flex={2} py={10}>
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        alignItems={{ base: "center", md: "flex-start" }}
+        justifyContent={{ base: "center", md: "flex-start" }}
+      >
+        <Box flexGrow={8} py={10}>
           <FeedPosts />
         </Box>
         <Box
-          flex={3}
-          mr={20}
-          display={{ base: "none", lg: "block" }}
+          flexGrow={2}
+          mt={{ base: 10, md: 0 }}
+          display={{ base: "flex", lg: "block" }}
           maxW={"300px"}
         >
           <SuggestedUsers />

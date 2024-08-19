@@ -39,10 +39,12 @@ const FeedPosts = () => {
             alignItems={"center"}
             flexDir={"column"}
           >
-            <Text fontSize={"medium"} color={"red.400"}>
+            <Text fontSize={"medium"} color={"red.400"} align={"center"}>
               Looks like no one is posting or you are not following any one!
             </Text>
-            <Text color={"red.400"}>Explore, meet, and follow new people!</Text>
+            <Text color={"red.400"} align={"center"}>
+              Explore, meet, and follow new people!
+            </Text>
           </Flex>
         </>
       )}
